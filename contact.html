@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <!---Font awesome cdn link-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!---Custom Css Link-->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!---headre section-->
+
+<header>
+  <h2 class="heading">Contact Us</h2>
+  
+    <div id="menu" class="fas fa-bars"></div>
+  
+    <nav class="navbar">
+       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./plan.html">Apps</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+       </ul>
+    </nav>
+
+</header>
+
+
+<section>
+  <div class="contact">
+    <form action="">
+      <input type="text" class="box" placeholder="name">
+      <input type="email" class="box" placeholder="your email">
+      <input type="password" class="box" placeholder="your password">
+      <textarea name="" id="" cols="30" rows="10" class="box-message" placeholder="message"></textarea>
+    
+      <!-- Add the message container element -->
+      <div class="message-container"></div>
+    
+      <input type="submit" class="btn" value="send message">
+    </form>
+    
+    
+    <div class="content2">
+    
+    <h3>Contact Us For Latest Updates</h3>
+    <p>Thank you for visiting our website! If you have any questions or would like to learn more about <a style="color: red;" href="./services.html">our services</a> , please don't hesitate to contact us. You can reach us using the following methods:</p>
+    <div class="icon">
+      <i class="fas fa-map-marker-alt"></i>Lilongwe, area 25
+    </div>
+    
+    <div class="icon">
+      <i class="fas fa-globe"></i> mikeenockmichael@gmail.com
+    </div>
+    
+    <div class="icon">
+      <i class="fas fa-phone"></i> +265 (0) 997 78 57 68 or +265 (0) 881 05 84 17
+    </div>
+    
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<div class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Why Choosing Us?</h3>
+      <p>
+        Our aim strives to create a design, be it a website design, a floor-plan designs and graphic designs which, are more appealing in the eyes of our clients. CHOOSE ME!! because anyone else would just be a tragedy- a tragedy of epic proportion that we are not sure your sanity could withstand.Trust us! you'll thank us later.
+      </p>
+    </div>
+
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="./index.html">Home</a>
+      <a href="./plan.html">Plan</a>
+      <a href="./services.html">Our Services</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="/about.html">About Us</a>
+    </div>
+
+    <div class="box-newsletter">
+      <h3>Newsletter</h3>
+      <form action="">
+        <p>Link me up for a well defined work</p>
+        <input type="email" placeholder="your email" id="email2" />
+        <input type="submit" class="btn" value="subscribe" />
+      </form>
+    </div>
+    
+  </div>
+  <p class="credits">created by Mikel Michael Enock ~~ All rights reserved</p>
+</div>
+
+
+    <!---jquery cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!---Customjs file link-->
+    <script src="script.js"></script>
+
+
+
+    <script>
+      // Code for the text area
+      const textarea = document.querySelector('.box-message');
+      const messageContainer = document.querySelector('.message-container');
+    
+      textarea.addEventListener('input', function() {
+        messageContainer.innerHTML = 'User is typing in the textarea';
+      });
+    
+      // Code to validate the email and password inputs
+      const emailInput = document.querySelector('.box[type="email"]');
+      const passwordInput = document.querySelector('.box[type="password"]');
+      emailInput.addEventListener('input', function() {
+        // Check if the email is in a valid format
+        if (!isValidEmail(emailInput.value)) {
+          alert('Please enter a valid email address');
+        }
+      });
+    
+      passwordInput.addEventListener('input', function() {
+        // Check if the password is at least 8 characters long
+        if (passwordInput.value.length < 8) {
+          alert('Password must be at least 8 characters long');
+        }
+      });
+    
+      function isValidEmail(email) {
+        // Use a regular expression to check if the email is in a valid format
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+    </script>
+
+
+
+  </body>
+</html>
